@@ -1039,7 +1039,11 @@ var SalesChart = (function() {
 				}
 			},
 			data: {
-				labels: ['May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+				labels: [
+				"{% for post in medias %}"
+				"{{ post.pk }},"
+				"{% endfor %}"
+				],
 				datasets: [{
 					label: 'Performance',
 					data: [0, 20, 10, 30, 15, 40, 20, 60, 60]

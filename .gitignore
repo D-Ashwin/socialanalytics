@@ -3,3 +3,7 @@
 creds.txt
 .env
 db.sqlite3
+staticfiles/*
+.idea
+.coverage
+coverage_report/*

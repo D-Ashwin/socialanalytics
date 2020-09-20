@@ -11,11 +11,15 @@ Analytics &amp; some nasty hidden features
 ##NewInstaIdeas
 	- Ask for authentication cron run.
 	- Update sync manually
-	- Get sms link to ask for 
 	- Get SMS/mail when someone unfollows me. Once in a day
     - On Twilio WhatsApp command, update the Insta List
     - Need Notification for frontend
 
+### Phase 2 :
+    - WhatsApp option to see the profile picture of any insta account. later : 
+        use https://www.instadp.com/fullsize/<username> : with proxy on bs4
+
 ##Done
     - Send message to Twilio whatsApp, Hi
     - Returns Insta Analytics Data
+    - Get My Insta Details option 

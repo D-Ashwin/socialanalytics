@@ -49,10 +49,15 @@ BASE_APPS = [
 USER_APPS = [
     'insta',
     'users',
-    'fb',
+    'fb'
 ]
 
-INSTALLED_APPS = BASE_APPS + USER_APPS
+THIRD_PARTY_APPS = [
+    'rest_framework',
+
+]
+
+INSTALLED_APPS = BASE_APPS + USER_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -62,6 +67,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'analytics.urls'
@@ -145,6 +151,7 @@ ACCOUNT_SID = os.getenv("TWILIO_ACCOUNT_SID")
 AUTH_TOKEN  = os.getenv("TWILIO_AUTH_TOKEN")
 INSTA_USERNAME  = os.getenv("INSTA_USERNAME")
 INSTA_PASSWORD  = os.getenv("INSTA_PASSWORD")
+MY_PHONE  = os.getenv("MY_PHONE")
 
 
 SENDGRID_API_KEY = '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'
@@ -159,3 +166,4 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 SENDGRID_SANDBOX_MODE_IN_DEBUG=True
 SENDGRID_ECHO_TO_STDOUT=True
+
