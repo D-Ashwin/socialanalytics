@@ -54,4 +54,4 @@ urlpatterns += [
 ]
 
 admin.site.site_header = 'Hi Admin! Welcome to Socan'
-admin.site.site_title = 'Socan admin'
+admin.site.site_title = '[ Socan admin ]'
