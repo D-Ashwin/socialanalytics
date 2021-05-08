@@ -53,5 +53,5 @@ urlpatterns += [
     path('api/v1/doc/', schema_view.with_ui('redoc',cache_timeout=0), name='schema-redoc'),
 ]
 
-admin.site.site_header = 'Welcome to Socan: Socan admin'
+admin.site.site_header = 'Hi Admin! Welcome to Socan'
 admin.site.site_title = 'Socan admin'
