@@ -19,6 +19,6 @@ urlpatterns = [
     path('update-insta/', api_views.UpdateInsta.as_view(), name='update-insta'),
     path('stalk/user/', api_views.StalkInstaView.as_view(), name='insta-stalk'),
     path('stalk/user/list/', api_views.StalkInstaUserListView.as_view(), name='insta-stalk-userlist'),
-    # path('test/', views.DemoTestCase.as_view(), name='testcase-demo'),
+    path('stalk/user/create/', api_views.StalkInstaUserCreateView.as_view(), name='insta-stalk-usercreate'),
 ]
 
