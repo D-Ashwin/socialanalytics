@@ -93,3 +93,19 @@ class InstagramMedia(models.Model):
 
     def __str__(self):
         return str(self.user.pk)
+
+
+# New models
+class TinyModel(models.Model):
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        abstract = False
+
+
+class InstaStalkUsers(TinyModel):
+    insta_username = models.CharField(max_length=255)
+
+    def __str__(self):
+        return str(self.insta_username)

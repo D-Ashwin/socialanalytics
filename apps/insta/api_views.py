@@ -3,6 +3,8 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from apps.insta.helpers import update_insta_analytics
+from apps.insta.models import InstaStalkUsers
+from apps.insta.serializers import InstaStalkUsersSerializer
 
 
 class DemoApiView(APIView):
@@ -48,3 +50,12 @@ class StalkInstaView(APIView):
             return Response({"image_url": url_}, status=status.HTTP_200_OK)
         except Exception as e:
             return Response({'status':500, 'message':str(e)},status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+class StalkInstaUserListView(APIView):
+    serializer_class = InstaStalkUsersSerializer
+
+    def get(self, request):
+        stu = InstaStalkUsers.objects.all()
+        serializer = self.serializer_class(stu, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
