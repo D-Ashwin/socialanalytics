@@ -39,6 +39,8 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 BASE_APPS = [
+    'admin_interface',
+    'colorfield',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -51,7 +53,8 @@ BASE_APPS = [
 USER_APPS = [
     'apps.insta',
     'apps.users',
-    'apps.fb'
+    'apps.fb',
+    'apps.common'
 ]
 
 THIRD_PARTY_APPS = [
@@ -60,6 +63,11 @@ THIRD_PARTY_APPS = [
 ]
 
 INSTALLED_APPS = BASE_APPS + USER_APPS + THIRD_PARTY_APPS
+
+
+APSCHEDULER_DATETIME_FORMAT = "N j, Y, f:s a"
+
+APSCHEDULER_RUN_NOW_TIMEOUT = 25  # Seconds
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
